@@ -1,0 +1,37 @@
+<h2 style="text-align: center">Sign up</h2>
+
+<div class="devise-container">
+  <div class="devise-container-left">
+    <img src="https://uploads-ssl.webflow.com/5abebcf1b3e0cb4bb9718bba/5b8ab636012ec313fbc6268f_DS%20Logo%20Final.svg" alt="" style="width: 199px">
+  </div>
+  <div>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Sign up" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div style="text-align: center; padding-top: 2em">
+  <%= render "devise/shared/links" %>
+</div>

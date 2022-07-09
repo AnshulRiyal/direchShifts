@@ -1,0 +1,36 @@
+<h2 style="text-align: center">Log in</h2>
+<div class="devise-container">
+  <div class="devise-container-left">
+    <img src="https://uploads-ssl.webflow.com/5abebcf1b3e0cb4bb9718bba/5b8ab636012ec313fbc6268f_DS%20Logo%20Final.svg" alt="" style="width: 199px">
+  </div>
+  <div class="devise-container-right">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "current-password" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "Log in" %>
+      </div>
+    <% end %>
+    </div>
+</div>
+
+<div style="text-align: center; padding-top: 2em">
+  <%= render "devise/shared/links" %>
+</div>
+
+

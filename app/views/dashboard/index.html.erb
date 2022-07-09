@@ -1,0 +1,27 @@
+<div class="dashboard">
+  <div class="dash-banner">
+    <h1> Hello Hello Hello!!!</h1>
+
+    <div>
+      <% if user_signed_in? %>
+        <h4> You have been successfully Logged In...🥂</h4>
+        <%= button_to(
+          "Log Out",
+          destroy_user_session_path,
+          method: :delete,
+          class: "btn btn-devise"
+        ) %>
+      <% else %>
+        <h4> Login to access new jobs...🚀</h4>
+        <span><%= link_to('Login 🔐', new_user_session_path, {class: "btn btn-devise"}) %></span>
+      <% end %>
+    </div>
+    <%= button_to(
+      "Refer a Friend 🕵️‍♀️",
+      referral_path,
+      method: :get,
+      class: "btn btn-devise"
+    ) %>
+  </div>
+</div>
+
