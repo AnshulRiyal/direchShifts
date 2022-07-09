@@ -1,0 +1,12 @@
+<div class="dashboard">
+  <div class="dash-banner">
+    <h1>Friend in need is a friend indeed🏳️‍🌈</h1>
+    <div class="refer-modal">
+      <%= form_with url: "/referral_mail", method: :get do |form| %>
+        <%= form.label :email, "Enter friends' E-mail:" %>
+        <%= form.text_field :email %>
+        <%= form.submit "Send", class: "btn btn-devise" %>
+      <% end %>
+    </div>
+  </div>
+</div>
