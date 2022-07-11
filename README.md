@@ -13,7 +13,7 @@ This web application explore the authentication process in rails 7.
 
 
 #### Running Live
-
+***Mailing feature can be tested on development Env only***
 <img align="right" src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/man-technologist_1f468-200d-1f4bb.png" height="50px">
 
 I have already deployed this Application on heroku and can be access with this [LINK](https://directshifts.herokuapp.com/)
